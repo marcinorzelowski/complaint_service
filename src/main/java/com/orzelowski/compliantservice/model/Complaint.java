@@ -7,12 +7,12 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "compliant",
+@Table(name = "complaint",
         uniqueConstraints = {@UniqueConstraint(columnNames = {"client_id", "product_id"})})
-public class Compliant {
+public class Complaint {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "compliant_seq_generator")
-    @SequenceGenerator(name = "compliant_seq_generator", sequenceName = "compliant_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "complaint_seq_generator")
+    @SequenceGenerator(name = "complaint_seq_generator", sequenceName = "complaint_seq", allocationSize = 1)
     private Long id;
     private int requestCounter = 1;
     private String text;
@@ -21,4 +21,5 @@ public class Compliant {
     @ManyToOne
     private Product product;
     private LocalDateTime creationDate;
+
 }

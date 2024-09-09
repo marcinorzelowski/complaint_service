@@ -1,6 +1,6 @@
 CREATE SEQUENCE customer_seq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE product_seq START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE compliant_seq START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE complaint_seq START WITH 1 INCREMENT BY 1;
 
 
 CREATE TABLE IF NOT EXISTS customer
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS product
     PRIMARY KEY (id)
 );
 
-CREATE TABLE compliant
+CREATE TABLE complaint
 (
     id              BIGINT,
     request_counter INT,

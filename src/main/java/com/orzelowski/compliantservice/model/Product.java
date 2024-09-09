@@ -16,5 +16,5 @@ public class Product {
     private String name;
     @OneToMany
     @JoinColumn(name = "product_id")
-    private List<Compliant> compliants;
+    private List<Complaint> complaints;
 }
