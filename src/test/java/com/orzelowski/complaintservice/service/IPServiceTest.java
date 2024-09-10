@@ -1,6 +1,6 @@
 package com.orzelowski.complaintservice.service;
 
-import com.orzelowski.complaintservice.Status;
+import com.orzelowski.complaintservice.enums.Status;
 import com.orzelowski.complaintservice.dto.IpApiResponse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +12,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 import reactor.core.publisher.Mono;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 class IPServiceTest {
