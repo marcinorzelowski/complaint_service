@@ -6,6 +6,7 @@ public record ComplaintResponse(
         Long id,
         String text,
         int requestCounter,
+        String country,
         Long authorId,
         Long productId,
         LocalDateTime creationDate

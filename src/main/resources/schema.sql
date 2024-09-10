@@ -26,6 +26,7 @@ CREATE TABLE complaint
     text            VARCHAR(255),
     author_id       BIGINT,
     product_id      BIGINT,
+    country         VARCHAR(255),
     creation_date   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_customer FOREIGN KEY (author_id) REFERENCES customer (id),
     CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES product (id),

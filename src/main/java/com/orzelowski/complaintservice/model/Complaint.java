@@ -22,6 +22,7 @@ public class Complaint {
     private Long id;
     @Builder.Default
     private int requestCounter = 1;
+    private String country;
     private String text;
     @ManyToOne
     private Customer author;
