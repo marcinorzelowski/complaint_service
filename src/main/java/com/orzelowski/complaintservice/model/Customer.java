@@ -1,4 +1,4 @@
-package com.orzelowski.compliantservice.model;
+package com.orzelowski.complaintservice.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

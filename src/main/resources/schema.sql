@@ -22,12 +22,12 @@ CREATE TABLE IF NOT EXISTS product
 CREATE TABLE complaint
 (
     id              BIGINT,
-    request_counter INT,
+    request_counter INT       DEFAULT 1,
     text            VARCHAR(255),
-    customer_id     BIGINT,
+    author_id       BIGINT,
     product_id      BIGINT,
-    creation_date   TIMESTAMP,
-    CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customer (id),
+    creation_date   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_customer FOREIGN KEY (author_id) REFERENCES customer (id),
     CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES product (id),
-    CONSTRAINT unique_client_product UNIQUE (customer_id, product_id)
+    CONSTRAINT unique_client_product UNIQUE (author_id, product_id)
 );

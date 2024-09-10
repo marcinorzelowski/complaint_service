@@ -1,4 +1,4 @@
-package com.orzelowski.compliantservice;
+package com.orzelowski.complaintservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
